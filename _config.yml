@@ -2,11 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://jskonst.github.io
+url: http://jskonst.ru
 title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: jskonst
-simple_search: http://yandex.ru/search
+simple_search: http://google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
