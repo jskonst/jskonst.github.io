@@ -2,15 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://jskonst.github.io/atom.xml" rel="self"/>
-  <link href="http://jskonst.github.io/"/>
-  <updated>2013-11-24T02:12:20+04:00</updated>
-  <id>http://jskonst.github.io/</id>
+  <link href="http://jskonst.ru/atom.xml" rel="self"/>
+  <link href="http://jskonst.ru/"/>
+  <updated>2013-11-24T13:01:53+04:00</updated>
+  <id>http://jskonst.ru/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[jskonst]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://jskonst.ru/blog/2013/11/24/hello-world/"/>
+    <updated>2013-11-24T12:24:18+04:00</updated>
+    <id>http://jskonst.ru/blog/2013/11/24/hello-world</id>
+    <content type="html"><![CDATA[<p>Начинать  всегда сложно, правда еще сложнее заканчивать, поэтому так долго подбирался я к выпуску этого &ldquo;блога&rdquo;. Возникла острая необходимость создавать и публиковать записи, выпустить пару методичек, а писать в  WYSIWYG-редакторе, мне не совсем подходит. Вот markdown, для моих задач подходит вполне, поэтому я развернул этот блог на движке Octopress, сам же сайт хостится на github.</p>
+
+<p>На этом мой простой HelloWorld заканчивается, дальше будут следовать более содержательные посты.</p>
+]]></content>
+  </entry>
   
 </feed>
