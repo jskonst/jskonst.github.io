@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Фильтрация данных - My Octopress Blog</title>
+  <title>Фильтрация данных - Jskonst</title>
   <meta name="author" content="jskonst">
 
   
-  <meta name="description" content="Фильтрация данных Dec 8th, 2013 В этом разделе, будет представлен небольщой пример &ldquo;фильтрации&rdquo; данных. Предположим, мы хотели бы &hellip;">
+  <meta name="description" content="Фильтрация данных Dec 8th, 2013 В этом разделе будет представлен небольшой пример &ldquo;фильтрации&rdquo; данных. Предположим, мы хотели бы &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +21,7 @@
   <link rel="canonical" href="http://jskonst.ru/platypus/filter.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Jskonst" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
@@ -36,7 +36,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Jskonst</a></h1>
   
     <h2>A blogging framework for hackers.</h2>
   
@@ -84,7 +84,7 @@
 <time datetime="2013-12-08T20:10:00+04:00" pubdate data-updated="true">Dec 8<span>th</span>, 2013</time></p>
   </header>
   
-  <p>В этом разделе, будет представлен небольщой пример &ldquo;фильтрации&rdquo; данных. Предположим, мы хотели бы добавить возможность пользователю фильтровать своих питомцев по типам &ndash; только кошки, собаки и т.д. Для этого в окне пользователя следует добавить связанный элемент управления &ndash; справочник, как представлено на рис.1</p>
+  <p>В этом разделе будет представлен небольшой пример &ldquo;фильтрации&rdquo; данных. Предположим, мы хотели бы добавить возможность пользователю фильтровать своих питомцев по типам &ndash; только кошки, собаки и т.д. Для этого в окне пользователя следует добавить связанный элемент управления &ndash; справочник, как представлено на рис.1</p>
 
 <p><img src="http://img-fotki.yandex.ru/get/6703/79520833.17/0_a6243_bf9e2f1f_L.png" alt="form with combo" /></p>
 
@@ -96,7 +96,9 @@
 
 <p>Рис.2 Изменение запроса, возвращающего список животных конкретного владельца</p>
 
-<p>Для этого в запросе добавляем параметр, который связываем с полем TYPE таблицы PET. После чего исправляем текст запроса таким образом, чтобы в случае отсутствия параметра типа животного, возвращался полный список питомцев. Следует помнить об аннотации &ldquo;@manual&rdquo;, поэтому, запрос следует вызывать всякий раз, когда пользователь изменит тип животного.</p>
+<p>Для этого в запросе добавляем параметр, который связываем с полем <code>TYPE</code> таблицы <code>PET</code>.
+ После чего исправляем текст запроса таким образом, чтобы в случае отсутствия параметра типа животного возвращался полный список питомцев.
+Следует помнить об аннотации <code>@manual</code>, поэтому запрос следует вызывать всякий раз, когда пользователь изменит тип животного.</p>
 
 <figure class='code'><figcaption><span>Измененный текст запроса</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -121,19 +123,22 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>В результате изменения запроса, произойдут его соответствующие изменения в модели данных. в результате чего в запрос можно будет передавать дополнительный параметр petType. Добавим параметр модели petTepe, который свяжем с соответствующим параметром запроса, как показано на рис.3.</p>
+<p>Модификация запроса приведет к соответствующим изменениям в модели данных, в результате чего в запрос можно будет передавать дополнительный параметр <code>petType</code>. Добавим параметр модели <code>petType</code>, который свяжем с соответствующим параметром запроса, как показано на рис.3.</p>
 
 <p><img src="http://img-fotki.yandex.ru/get/9302/79520833.17/0_a6244_bfd3ab76_XL.png" alt="Modify model" /></p>
 
 <p>Рис.3 Добавление параметра модели</p>
 
-<p>Далее необходимо связать справочник (modelCombo) с соответствующим параметром и полями справочника petType. В свойствах справочника в поле field укажем параетр модели &ndash; petType, а поля displayField and valueField укажем соответствующие поля NAME и PETTYPE_ID таблицы справочника petTypes.</p>
+<p>Далее необходимо связать виджет <em>справочник</em> (<em>modelCombo</em>) с соответствующим параметром и полями таблицы модели данных <code>petType</code>.
+В свойствах виджета <em>справочник</em> в поле <code>field</code> укажем параметр модели &ndash; <code>petType</code>, а поля <code>displayField</code> and <code>valueField</code> укажем соответствующие поля <code>NAME</code> и <code>PETTYPE_ID</code> таблицы <code>petTypes</code>.</p>
 
 <p><img src="http://img-fotki.yandex.ru/get/9826/79520833.18/0_a6248_5e6e2c70_XL.png" alt="Correct Combo" /></p>
 
 <p>Рис.4 Настраиваем параметры справочника</p>
 
-<p>Поскольку в запросе указана аннотация &ldquo;@manual&rdquo;, то при изменении пользователем выбираемого животного в справочнике следует производить перевыполнение запроса. Поскольку изменение типа питомца приведет к изменению параметра модели, добавим код перевыполнения запроса в событие OnChanged параметров модели данных. На рис.3, справа представлен интерфейс установки обработчика события для параметров модели. В случае, если у запроса отсутствует аннотация &ldquo;@manual&rdquo;, то данную операцию можно не выполнять.
+<p>Поскольку в запросе указана аннотация <code>@manual</code>, то при изменении пользователем выбираемого животного в справочнике следует производить перевыполнение запроса.
+Поскольку изменение типа питомца приведет к изменению параметра модели, добавим код перевыполнения запроса в событие <strong>OnChanged</strong> параметров модели данных.
+На рис.3, справа представлен интерфейс установки обработчика события для параметров модели. В случае, если у запроса отсутствует аннотация <code>@manual</code>, то данную операцию можно не выполнять.
 В результате код обработчика будет иметь следующий вид:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -161,7 +166,7 @@
 
 <p><img src="http://img-fotki.yandex.ru/get/6724/79520833.18/0_a6249_c2b04f4_XL.png" alt="Correct Combo" /></p>
 
-<p>Рис.5 Тип питомца &ndash; кот</p>
+<p>Рис.6 Тип питомца &ndash; кот</p>
 
   
     <footer>
@@ -181,6 +186,14 @@
 
 <time datetime="2013-12-08T20:10:00+04:00" pubdate data-updated="true">Dec 8<span>th</span>, 2013</time>
         
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/platypus/'>Platypus</a>
+  
+</span>
+
+
       </p>
       
         <div class="sharing">
