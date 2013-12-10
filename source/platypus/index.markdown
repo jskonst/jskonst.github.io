@@ -1,10 +1,11 @@
 ---
 layout: page
-title: "platypus"
+title: "Platypus"
 date: 2013-12-08 20:09
 comments: true
 sharing: true
 footer: true
+categories: [Platypus]
 ---
-# Platypus and all all all
-<a href="{{ root_url}}/platypus/first.html"> first </a>
+Конечно, это не совсем то, с чего я бы хотел начать рассказ, но сроки поджимают, поэтому я вынужден сперва выложить... назовем её 5-й частью, в которой рассматривается достаточно сложные (для начинающих вопросы) callback'и и 
+<a href="{{ root_url}}/platypus/filter.html"> фильтрация </a>, хотя в данном конкретном примере используется не фильтрация, а выполняется запрос.
